@@ -1,3 +1,4 @@
+import Sidebar from "../components/sidebar/Sidebar";
 
 interface UsersLayoutProps {
     children: React.ReactNode;
@@ -5,6 +6,11 @@ interface UsersLayoutProps {
 
 export default function UsersLayout({children}: UsersLayoutProps) {
     return (
-        <div>{children}</div>
+        // @ts-ignore
+        <Sidebar>
+            <div className="h-screen">
+                {children}
+            </div>
+        </Sidebar>
     )
 }
